@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.typeWriter__container {
+  background-color: rgb(25, 25, 25);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.typeWriter {
+  border-right: 2px solid rgb(255, 255, 255);
+  animation: blinkBorder 0.6s infinite ease,
+    typeLetters 3s steps(40) 1s 1 normal both;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes blinkBorder {
+  from {
+    border-right: 2px solid rgb(255, 255, 255);
+  }
+  to {
+    border-right: 2px solid transparent;
+  }
+}
+
+@keyframes typeLetters {
+  from {
+    width: 0;
+  }
+  to {
+    width: 17.7em;
+  }
+}
